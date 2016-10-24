@@ -27,4 +27,7 @@
   <remove-node path="/api/package[@name='com.mbientlab.metawear.module']/interface[@name='Temperature']/method[@name='routeData']" />
   <remove-node path="/api/package[@name='com.mbientlab.metawear.module']/interface[@name='Temperature']/method[@name='routeData']" />
 
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.data']/class[@name='CartesianFloat']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.data']/class[@name='CartesianShort']" />
+
 </metadata>
