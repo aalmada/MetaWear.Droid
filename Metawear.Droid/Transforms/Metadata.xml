@@ -22,5 +22,9 @@
         name="managedName">MbientLab.MetaWear.Module</attr>
   <attr path="/api/package[@name='com.mbientlab.metawear.processor']" 
         name="managedName">MbientLab.MetaWear.Processor</attr>
+  
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.module']/interface[@name='Accelerometer']/method[@name='routeData']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.module']/interface[@name='Temperature']/method[@name='routeData']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.module']/interface[@name='Temperature']/method[@name='routeData']" />
 
 </metadata>
