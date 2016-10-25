@@ -7,7 +7,7 @@ namespace MbientLab.MetaWear.Data
 
     // Metadata.xml XPath class reference: path="/api/package[@name='com.mbientlab.metawear.data']/class[@name='CartesianShort']"
     [global::Android.Runtime.Register("com/mbientlab/metawear/data/CartesianShort", DoNotGenerateAcw = true)]
-    public class CartesianShort : global::Java.Lang.Object, global::MbientLab.MetaWear.Data.ICartesian
+    public abstract class CartesianShort : global::Java.Lang.Object, global::MbientLab.MetaWear.Data.ICartesian<global::Java.Lang.Short>
     {
         public global::Java.Lang.Short X { get; set; }
         public global::Java.Lang.Short Y { get; set; }
@@ -65,29 +65,10 @@ namespace MbientLab.MetaWear.Data
             {
             }
         }
-
-        // This method is explicitly implemented as a member of an instantiated MbientLab.MetaWear.Data.ICartesian
-        global::Java.Lang.Object global::MbientLab.MetaWear.Data.ICartesian.X()
-        {
-            return global::Java.Interop.JavaObjectExtensions.JavaCast<Java.Lang.Object>(X);
-        }
-
-        // This method is explicitly implemented as a member of an instantiated MbientLab.MetaWear.Data.ICartesian
-        global::Java.Lang.Object global::MbientLab.MetaWear.Data.ICartesian.Y()
-        {
-            return global::Java.Interop.JavaObjectExtensions.JavaCast<Java.Lang.Object>(Y);
-        }
-
-        // This method is explicitly implemented as a member of an instantiated MbientLab.MetaWear.Data.ICartesian
-        global::Java.Lang.Object global::MbientLab.MetaWear.Data.ICartesian.Z()
-        {
-            return global::Java.Interop.JavaObjectExtensions.JavaCast<Java.Lang.Object>(Z);
-        }
-
     }
 
     [global::Android.Runtime.Register("com/mbientlab/metawear/data/CartesianShort", DoNotGenerateAcw = true)]
-    internal partial class CartesianShortInvoker : CartesianShort, global::MbientLab.MetaWear.Data.ICartesian
+    internal partial class CartesianShortInvoker : CartesianShort, global::MbientLab.MetaWear.Data.ICartesian<global::Java.Lang.Short>
     {
 
         public CartesianShortInvoker(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer) { }

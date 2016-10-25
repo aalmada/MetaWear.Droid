@@ -7,12 +7,8 @@ namespace MbientLab.MetaWear.Data
 
     // Metadata.xml XPath class reference: path="/api/package[@name='com.mbientlab.metawear.data']/class[@name='CartesianFloat']"
     [global::Android.Runtime.Register("com/mbientlab/metawear/data/CartesianFloat", DoNotGenerateAcw = true)]
-    public class CartesianFloat : global::Java.Lang.Object, global::MbientLab.MetaWear.Data.ICartesian
+    public abstract class CartesianFloat : global::Java.Lang.Object, global::MbientLab.MetaWear.Data.ICartesian<global::Java.Lang.Float>
     {
-        public global::Java.Lang.Float X { get; set; }
-        public global::Java.Lang.Float Y { get; set; }
-        public global::Java.Lang.Float Z { get; set; }
-
         internal static IntPtr java_class_handle;
         internal static IntPtr class_ref
         {
@@ -65,29 +61,10 @@ namespace MbientLab.MetaWear.Data
             {
             }
         }
-
-        // This method is explicitly implemented as a member of an instantiated MbientLab.MetaWear.Data.ICartesian
-        global::Java.Lang.Object global::MbientLab.MetaWear.Data.ICartesian.X()
-        {
-            return global::Java.Interop.JavaObjectExtensions.JavaCast<Java.Lang.Object>(X);
-        }
-
-        // This method is explicitly implemented as a member of an instantiated MbientLab.MetaWear.Data.ICartesian
-        global::Java.Lang.Object global::MbientLab.MetaWear.Data.ICartesian.Y()
-        {
-            return global::Java.Interop.JavaObjectExtensions.JavaCast<Java.Lang.Object>(Y);
-        }
-
-        // This method is explicitly implemented as a member of an instantiated MbientLab.MetaWear.Data.ICartesian
-        global::Java.Lang.Object global::MbientLab.MetaWear.Data.ICartesian.Z()
-        {
-            return global::Java.Interop.JavaObjectExtensions.JavaCast<Java.Lang.Object>(Z);
-        }
-
     }
 
     [global::Android.Runtime.Register("com/mbientlab/metawear/data/CartesianFloat", DoNotGenerateAcw = true)]
-    internal partial class CartesianFloatInvoker : CartesianFloat, global::MbientLab.MetaWear.Data.ICartesian
+    internal partial class CartesianFloatInvoker : CartesianFloat, global::MbientLab.MetaWear.Data.ICartesian<global::Java.Lang.Float>
     {
 
         public CartesianFloatInvoker(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer) { }
