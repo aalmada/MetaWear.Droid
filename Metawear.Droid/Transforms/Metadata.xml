@@ -29,9 +29,9 @@
   <remove-node path="/api/package[@name='com.mbientlab.metawear.data']/class[@name='CartesianFloat']" />
   <remove-node path="/api/package[@name='com.mbientlab.metawear.data']/class[@name='CartesianShort']" />
 
-  <remove-node path="/api/package[@name='com.mbientlab.metawear']/class[@name='Message']/method[@name='getData' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;T&gt;']]" />
-  <remove-node path="/api/package[@name='com.mbientlab.metawear.data']/class[@name='Bmi160ThreeAxisMessage']/method[@name='getData']" />
+  <!--<remove-node path="/api/package[@name='com.mbientlab.metawear']/class[@name='Message']/method[@name='getData' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;T&gt;']]" />-->
+  <!--<remove-node path="/api/package[@name='com.mbientlab.metawear.data']/class[@name='Bmi160ThreeAxisMessage']/method[@name='getData']" />
   <remove-node path="/api/package[@name='com.mbientlab.metawear.data']/class[@name='Bmm150ThreeAxisMessage']/method[@name='getData']" />
-  <remove-node path="/api/package[@name='com.mbientlab.metawear.data']/class[@name='Mma8452qThreeAxisMessage']/method[@name='getData']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.data']/class[@name='Mma8452qThreeAxisMessage']/method[@name='getData']" />-->
 
 </metadata>
