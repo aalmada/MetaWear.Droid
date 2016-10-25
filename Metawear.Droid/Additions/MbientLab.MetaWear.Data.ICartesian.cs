@@ -77,7 +77,7 @@ namespace MbientLab.MetaWear.Data {
 
 		static IntPtr n_X (IntPtr jnienv, IntPtr native__this)
 		{
-			global::MbientLab.MetaWear.Data.ICartesian<T> __this = global::Java.Lang.Object.GetObject<global::MbientLab.MetaWear.Data.ICartesian> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::MbientLab.MetaWear.Data.ICartesian<T> __this = global::Java.Lang.Object.GetObject<global::MbientLab.MetaWear.Data.ICartesian<T>> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			return JNIEnv.ToLocalJniHandle (__this.X ());
 		}
 #pragma warning restore 0169
@@ -101,7 +101,7 @@ namespace MbientLab.MetaWear.Data {
 
 		static IntPtr n_Y (IntPtr jnienv, IntPtr native__this)
 		{
-			global::MbientLab.MetaWear.Data.ICartesian<T> __this = global::Java.Lang.Object.GetObject<global::MbientLab.MetaWear.Data.ICartesian> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::MbientLab.MetaWear.Data.ICartesian<T> __this = global::Java.Lang.Object.GetObject<global::MbientLab.MetaWear.Data.ICartesian<T>> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			return JNIEnv.ToLocalJniHandle (__this.Y ());
 		}
 #pragma warning restore 0169
@@ -125,7 +125,7 @@ namespace MbientLab.MetaWear.Data {
 
 		static IntPtr n_Z (IntPtr jnienv, IntPtr native__this)
 		{
-			global::MbientLab.MetaWear.Data.ICartesian<T> __this = global::Java.Lang.Object.GetObject<global::MbientLab.MetaWear.Data.ICartesian> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::MbientLab.MetaWear.Data.ICartesian<T> __this = global::Java.Lang.Object.GetObject<global::MbientLab.MetaWear.Data.ICartesian<T>> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			return JNIEnv.ToLocalJniHandle (__this.Z ());
 		}
 #pragma warning restore 0169

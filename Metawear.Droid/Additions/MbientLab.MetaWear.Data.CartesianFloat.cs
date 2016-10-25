@@ -61,6 +61,31 @@ namespace MbientLab.MetaWear.Data
             {
             }
         }
+
+        IntPtr id_x;
+        public unsafe global::Java.Lang.Float X()
+        {
+            if (id_x == IntPtr.Zero)
+                id_x = JNIEnv.GetMethodID(class_ref, "x", "()Ljava/lang/Number;");
+            return (global::Java.Lang.Float)global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_x), JniHandleOwnership.TransferLocalRef);
+        }
+
+        IntPtr id_y;
+        public unsafe global::Java.Lang.Float Y()
+        {
+            if (id_y == IntPtr.Zero)
+                id_y = JNIEnv.GetMethodID(class_ref, "y", "()Ljava/lang/Number;");
+            return (global::Java.Lang.Float)global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_y), JniHandleOwnership.TransferLocalRef);
+        }
+
+        IntPtr id_z;
+        public unsafe global::Java.Lang.Float Z()
+        {
+            if (id_z == IntPtr.Zero)
+                id_z = JNIEnv.GetMethodID(class_ref, "z", "()Ljava/lang/Number;");
+            return (global::Java.Lang.Float)global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_z), JniHandleOwnership.TransferLocalRef);
+        }
+
     }
 
     [global::Android.Runtime.Register("com/mbientlab/metawear/data/CartesianFloat", DoNotGenerateAcw = true)]

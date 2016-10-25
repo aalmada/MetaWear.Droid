@@ -9,10 +9,6 @@ namespace MbientLab.MetaWear.Data
     [global::Android.Runtime.Register("com/mbientlab/metawear/data/CartesianShort", DoNotGenerateAcw = true)]
     public abstract class CartesianShort : global::Java.Lang.Object, global::MbientLab.MetaWear.Data.ICartesian<global::Java.Lang.Short>
     {
-        public global::Java.Lang.Short X { get; set; }
-        public global::Java.Lang.Short Y { get; set; }
-        public global::Java.Lang.Short Z { get; set; }
-
         internal static IntPtr java_class_handle;
         internal static IntPtr class_ref
         {
@@ -65,6 +61,31 @@ namespace MbientLab.MetaWear.Data
             {
             }
         }
+
+        IntPtr id_x;
+        public unsafe global::Java.Lang.Short X()
+        {
+            if (id_x == IntPtr.Zero)
+                id_x = JNIEnv.GetMethodID(class_ref, "x", "()Ljava/lang/Number;");
+            return (global::Java.Lang.Short)global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_x), JniHandleOwnership.TransferLocalRef);
+        }
+
+        IntPtr id_y;
+        public unsafe global::Java.Lang.Short Y()
+        {
+            if (id_y == IntPtr.Zero)
+                id_y = JNIEnv.GetMethodID(class_ref, "y", "()Ljava/lang/Number;");
+            return (global::Java.Lang.Short)global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_y), JniHandleOwnership.TransferLocalRef);
+        }
+
+        IntPtr id_z;
+        public unsafe global::Java.Lang.Short Z()
+        {
+            if (id_z == IntPtr.Zero)
+                id_z = JNIEnv.GetMethodID(class_ref, "z", "()Ljava/lang/Number;");
+            return (global::Java.Lang.Short)global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_z), JniHandleOwnership.TransferLocalRef);
+        }
+
     }
 
     [global::Android.Runtime.Register("com/mbientlab/metawear/data/CartesianShort", DoNotGenerateAcw = true)]
