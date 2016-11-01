@@ -16,11 +16,78 @@
   <attr path="/api/package[@name='com.mbientlab.metawear.module']" name="managedName">MbientLab.MetaWear.Module</attr>
   <attr path="/api/package[@name='com.mbientlab.metawear.processor']" name="managedName">MbientLab.MetaWear.Processor</attr>
   
+  <!-- routeData method is redefined in derived interfaces, generating problems in csharp  -->
   <remove-node path="/api/package[@name='com.mbientlab.metawear.module']/interface[@name='Accelerometer']/method[@name='routeData']" />
   <remove-node path="/api/package[@name='com.mbientlab.metawear.module']/interface[@name='Temperature']/method[@name='routeData']" />
 
+  <!-- These classes are abstract and instances are created as anonymous classes, generating problems in csharp -->
+  <!-- These classes are implemented in Additions folder -->
   <remove-node path="/api/package[@name='com.mbientlab.metawear.data']/interface[@name='Cartesian']" />
   <remove-node path="/api/package[@name='com.mbientlab.metawear.data']/class[@name='CartesianFloat']" />
   <remove-node path="/api/package[@name='com.mbientlab.metawear.data']/class[@name='CartesianShort']" />
+
+  <!-- The following classes and interfaces are private but are handled incorrectly -->
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Bma255AccelerometerImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Bme280BarometerImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Bme280HumidityImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Bmi160AccelerometerImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Bmi160GyroImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Bmm150MagnetometerImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Bmp280BarometerImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.BMP280Impl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.ConductanceImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.DataProcessorModuleImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.DebugImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.ExtThermistorImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.GpioImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.GsrImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.HapticImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.I2CImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.IBeaconImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/interface[@name='DefaultMetaWearBoard.EventListener']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/interface[@name='DefaultMetaWearBoard.IdCreator']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/interface[@name='DefaultMetaWearBoard.ResponseProcessor']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/interface[@name='DefaultMetaWearBoard.RouteHandler']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/interface[@name='DefaultMetaWearBoard.Subscription']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.LedImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Loggable']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.LoggingImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Ltr329AmbientLightImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.MacroImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Mma8452qAccelerometerImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Mma8452qAccelerometerImpl.MovementConfigEditorImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.MultiChannelTemperatureImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.NeoPixelImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.NrfDieImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.PresetThermistorImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.ProcessorSubscription']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.ReferenceTick']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.RouteBuilder']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.RouteBuilder.DataProcessorStateSignal']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.RouteBuilder.DataSignalImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.RouteBuilder.DataSource']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.RouteBuilder.EventSignal']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.RouteBuilder.HighFreqThreeAxisDataSource']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.RouteBuilder.InvalidDataSignal']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.RouteBuilder.ProcessedDataSignal']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.RouteBuilder.SingleAxisDataSource']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.RouteBuilder.StaticProcessedDataSignal']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.RouteBuilder.ThreeAxisDataSource']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.RouteManagerImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.SensorSubscription']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.SettingsImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.SingleChannelTemperatureImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.SourceImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.SPIImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.SPIImpl.ParameterBuilderImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.StandardLoggable']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Subscription']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.SwitchImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Tcs34725ColorDetectorImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.ThreeAxisLoggable']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.TimerControllerImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.TimerImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.Tsl2671ProximityImpl']" />
+  <remove-node path="/api/package[@name='com.mbientlab.metawear.impl']/class[@name='DefaultMetaWearBoard.VariableLoggable']" />
 
 </metadata>
