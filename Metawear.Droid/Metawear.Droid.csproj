@@ -42,6 +42,7 @@
     <Compile Include="Additions\MbientLab.MetaWear.Data.CartesianFloat.cs" />
     <Compile Include="Additions\MbientLab.MetaWear.Data.CartesianShort.cs" />
     <Compile Include="Additions\MbientLab.MetaWear.Data.ICartesian.cs" />
+    <Compile Include="Additions\MbientLab.MetaWear.Impl.DefaultMetaWearBoard.cs" />
     <Compile Include="Additions\MbientLab.MetaWear.Impl.Version.cs" />
     <Compile Include="Additions\MessageExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

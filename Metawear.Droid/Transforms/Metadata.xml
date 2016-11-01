@@ -8,20 +8,13 @@
   -->
 
   <!-- Normalize the namespaces for .NET -->
-  <attr path="/api/package[@name='com.mbientlab.metawear']" 
-        name="managedName">MbientLab.MetaWear</attr>
-  <attr path="/api/package[@name='com.mbientlab.metawear.data']" 
-        name="managedName">MbientLab.MetaWear.Data</attr>
-  <attr path="/api/package[@name='com.mbientlab.metawear.impl']" 
-        name="managedName">MbientLab.MetaWear.Impl</attr>
-  <attr path="/api/package[@name='com.mbientlab.metawear.impl.characteristic']" 
-        name="managedName">MbientLab.MetaWear.Impl.Characteristic</attr>
-  <attr path="/api/package[@name='com.mbientlab.metawear.impl.dfu']" 
-        name="managedName">MbientLab.MetaWear.Impl.Dfu</attr>
-  <attr path="/api/package[@name='com.mbientlab.metawear.module']" 
-        name="managedName">MbientLab.MetaWear.Module</attr>
-  <attr path="/api/package[@name='com.mbientlab.metawear.processor']" 
-        name="managedName">MbientLab.MetaWear.Processor</attr>
+  <attr path="/api/package[@name='com.mbientlab.metawear']" name="managedName">MbientLab.MetaWear</attr>
+  <attr path="/api/package[@name='com.mbientlab.metawear.data']" name="managedName">MbientLab.MetaWear.Data</attr>
+  <attr path="/api/package[@name='com.mbientlab.metawear.impl']" name="managedName">MbientLab.MetaWear.Impl</attr>
+  <attr path="/api/package[@name='com.mbientlab.metawear.impl.characteristic']" name="managedName">MbientLab.MetaWear.Impl.Characteristic</attr>
+  <attr path="/api/package[@name='com.mbientlab.metawear.impl.dfu']" name="managedName">MbientLab.MetaWear.Impl.Dfu</attr>
+  <attr path="/api/package[@name='com.mbientlab.metawear.module']" name="managedName">MbientLab.MetaWear.Module</attr>
+  <attr path="/api/package[@name='com.mbientlab.metawear.processor']" name="managedName">MbientLab.MetaWear.Processor</attr>
   
   <remove-node path="/api/package[@name='com.mbientlab.metawear.module']/interface[@name='Accelerometer']/method[@name='routeData']" />
   <remove-node path="/api/package[@name='com.mbientlab.metawear.module']/interface[@name='Temperature']/method[@name='routeData']" />
